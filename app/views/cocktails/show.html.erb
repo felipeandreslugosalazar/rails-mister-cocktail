@@ -1,5 +1,13 @@
 <h1>cocktails show</h1>
 <h2><%= @cocktail.name %></h2>
+
+<% @cocktail.doses.each do |dose| %>
+  <h2> <%= dose.description %> </h2>
+  <h2> <%= dose.ingredient.name %> </h2>
+
+<% end %>
+
 <h2>A user can see the details of a given cocktail, with the dose needed for each ingredient
 </h2>
 <%= link_to "cocktail list", cocktails_path %>
+<%= link_to "create a new dose", new_cocktail_dose_path(@cocktail) %>

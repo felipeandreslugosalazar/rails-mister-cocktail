@@ -42,6 +42,7 @@
 Ingredient.destroy_all
 require "faker"
 
+
 50.times do
   Ingredient.create(name: Faker::Food.ingredient)
 end

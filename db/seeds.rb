@@ -30,21 +30,30 @@
 
 # puts "Cleaning Cocktails database..."
 # Cocktail.destroy_all
+
 # cocktails.each do |cocktail|
 #   Cocktail.create(name: cocktail)
 # end
+
 # puts "Cocktails seeded!"
 # =======================================================================END
 
 # =======================================================================
-# =======================================================================
-# puts "Cleaning Ingredients database..."
-Ingredient.destroy_all
 require "faker"
 
+puts "Cleaning Ingredients database..."
+Ingredient.destroy_all
 
 50.times do
   Ingredient.create(name: Faker::Food.ingredient)
 end
-# puts "Ingredients seeded!"
+puts "Ingredients seeded!"
+
+puts "Cleaning Cocktails database..."
+Cocktail.destroy_all
+
+10.times do
+  Cocktail.create(name: Faker::FunnyName.two_word_name)
+end
+puts "Cocktails seeded!"
 # =======================================================================

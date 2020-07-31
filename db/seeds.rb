@@ -52,8 +52,8 @@ puts "Ingredients seeded!"
 puts "Cleaning Cocktails database..."
 Cocktail.destroy_all
 
-10.times do
-  Cocktail.create(name: Faker::FunnyName.two_word_name)
-end
+# 10.times do
+#   Cocktail.create(name: Faker::FunnyName.two_word_name)
+# end
 puts "Cocktails seeded!"
 # =======================================================================
